@@ -5,7 +5,6 @@ from torch.autograd import Variable
 import numpy as np
 import pandas as pd
 import time
-import matplotlib.pyplot as plt
 import pdb, os, argparse
 from datetime import datetime
 from model.ResNet_models import Generator
