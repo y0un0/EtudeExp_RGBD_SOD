@@ -38,7 +38,7 @@ JL_DCF.py:
 ## Entrainement
 
 - Télécharge les poids resnet101-5d3b4d8f grâce au lien gdrive présent dans le README de la page principale puis placer les poids dans le dossier "pretrained"
-- Télécharger le dataset d'entrainement grâce au lien gdrive présent dans le README de la page principale.
+- Télécharger le dataset d'entrainement ("RGBDcollection") grâce au lien gdrive présent dans le README de la page principale.
 - Lancer l'entrainement grâce à la commande suivante:
 
 ```bash 
