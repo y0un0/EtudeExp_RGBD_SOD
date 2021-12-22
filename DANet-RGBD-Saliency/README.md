@@ -36,6 +36,7 @@ generate_visfeamaps.py:
 - Pytorch 1.5.0
 - torchvision
 - numpy
+- scipy
 - Pillow
 - Cython
 - pydensecrf-1.0rc2
