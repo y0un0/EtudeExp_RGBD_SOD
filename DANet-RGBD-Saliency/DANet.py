@@ -105,7 +105,6 @@ class RGBD_sal(nn.Module):
 
         if self.training:
             return output,output5,output5_rev,dem1_attention,dem2_attention,dem3_attention,dem4_attention,dem5_attention
-        # return F.sigmoid(output) # enlever le commentaire si test sans carte d'attention
         return F.sigmoid(output),F.sigmoid(output5),F.sigmoid(output5_rev),dem1_attention,dem2_attention,dem3_attention,dem4_attention,dem5_attention, c1, c2, c3, c4, c5 
 
 if __name__ == "__main__":

@@ -64,7 +64,7 @@ def main():
                 depth = Variable(depth_transform(depth).unsqueeze(0), volatile=True).cuda()
                 torch.cuda.synchronize()
                 time_s = time.time()
-                prediction = net(img_var,depth)
+                prediction, _, _, _, _, _, _, _, _, _, _, _, _ = net(img_var,depth)
                 torch.cuda.synchronize()
                 time_e = time.time()
                 prediction = to_pil(prediction.data.squeeze(0).cpu())
