@@ -6,27 +6,48 @@ import time
 
 
 def get_test_info(config):
-    if config.sal_mode == 'NJU2K':
-        image_root = 'dataset/test/NJU2K_test/'
-        image_source = 'dataset/test/NJU2K_test/test.lst'
-    elif config.sal_mode == 'STERE':
-        image_root = 'dataset/test/STERE/'
-        image_source = 'dataset/test/STERE/test.lst'
-    elif config.sal_mode == 'RGBD135':
-        image_root = 'dataset/test/RGBD135/'
-        image_source = 'dataset/test/RGBD135/test.lst'
-    elif config.sal_mode == 'LFSD':
-        image_root = 'dataset/test/LFSD/'
-        image_source = 'dataset/test/LFSD/test.lst'
-    elif config.sal_mode == 'NLPR':
-        image_root = 'dataset/test/NLPR/'
-        image_source = 'dataset/test/NLPR/test.lst'
-    elif config.sal_mode == 'SIP':
-        image_root = 'dataset/test/SIP/'
-        image_source = 'dataset/test/SIP/test.lst'
-    elif config.sal_mode == 'ReDWeb-S':
-        image_root = 'dataset/test/ReDWeb-S/'
-        image_source = 'dataset/test/ReDWeb-S/test.lst'
+    if config.sal_mode == 'Objectscale':
+        image_root = '/content/Objectscale/'
+        image_source = '/content/Objectscale/test.lst'
+    elif config.sal_mode == 'Multiobjects':
+        image_root = '/content/Multiobjects/'
+        image_source = '/content/Multiobjects/test.lst'
+    elif config.sal_mode == 'Illumination':
+        image_root = '/content/Illumination/'
+        image_source = '/content/Illumination/test.lst'
+    elif config.sal_mode == 'Complexbackground':
+        image_root = '/content/Complexbackground/'
+        image_source = '/content/Complexbackground/test.lst'
+    elif config.sal_mode == 'small':
+        image_root = '/content/small/'
+        image_source = '/content/small/test.lst'
+    elif config.sal_mode == 'medium':
+        image_root = '/content/medium/'
+        image_source = '/content/medium/test.lst'
+    elif config.sal_mode == 'large':
+        image_root = '/content/large/'
+        image_source = '/content/large/test.lst'
+    elif config.sal_mode == 'Single':
+        image_root = '/content/Single/'
+        image_source = '/content/Single/test.lst'
+    elif config.sal_mode == 'Multi':
+        image_root = '/content/Multi/'
+        image_source = '/content/Multi/test.lst'
+    elif config.sal_mode == 'Low':
+        image_root = '/content/Low/'
+        image_source = '/content/Low/test.lst'
+    elif config.sal_mode == 'High':
+        image_root = '/content/High/'
+        image_source = '/content/High/test.lst'
+    elif config.sal_mode == 'simple':
+        image_root = '/content/simple/'
+        image_source = '/content/simple/test.lst'
+    elif config.sal_mode == 'uncertain':
+        image_root = '/content/uncertain/'
+        image_source = '/content/uncertain/test.lst'
+    elif config.sal_mode == 'complex':
+        image_root = '/content/complex/'
+        image_source = '/content/complex/test.lst'
     else:
         raise Exception('Invalid config.sal_mode')
 
@@ -94,8 +115,9 @@ if __name__ == '__main__':
     # Testing settings
     parser.add_argument('--model', type=str, default='checkpoints/vgg16.pth')  # Snapshot
     parser.add_argument('--test_folder', type=str, default='test/vgg16/LFSD/')  # Test results saving folder
-    parser.add_argument('--sal_mode', type=str, default='LFSD',
-                        choices=['NJU2K', 'NLPR', 'STERE', 'RGBD135', 'LFSD', 'SIP', 'ReDWeb-S'])  # Test image dataset
+    parser.add_argument('--sal_mode', type=str, default='Objectscale',
+                        choices=['Objectscale', 'Multiobjects', 'Illumination', 'Complexbackground', 'small', 'medium', 'large',
+                                    'Single', 'Multi', 'Low', 'High', 'simple', 'uncertain', 'complex'])  # Test image dataset
 
     # Misc
     parser.add_argument('--mode', type=str, default='train', choices=['train', 'test'])
