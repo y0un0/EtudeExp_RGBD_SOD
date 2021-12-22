@@ -50,14 +50,14 @@ class DepthBranch(nn.Module):
         x3 = self.bottleneck3(x2)
         x4 = self.bottleneck4(x3)
         x5 = self.bottleneck5(x4)
-        # s_d = self.conv_s_d(x5) # Comment it later
+        # s_d = self.conv_s_d(x5)
 
         feat.append(x1)
         feat.append(x2)
         feat.append(x3)
         feat.append(x4)
         feat.append(x5)
-        return x1 ,feat # replace s_d by x1
+        return x1 ,feat
 
 class _ConvBNReLU(nn.Module):
     """Conv-BN-ReLU"""
