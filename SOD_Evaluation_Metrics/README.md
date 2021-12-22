@@ -37,12 +37,7 @@
   
     `python draw_curve.py`
   
-  Then, the image file will be saved to './score/'. Two virtual curves are shown as follows:
-
-
-| PR curve: Dataset_2  | F-measure curve: Dataset_2 | 
-|:--------------------|:----------------
-| ![pr](./score/Dataset_2_pr.png) |   ![fm](./score/Dataset_2_fm.png) | 
+  Then, the image file will be saved to '/content/score/'. Two virtual curves are shown as follows:
 
 
 - The above metrics are related to the following papers:
