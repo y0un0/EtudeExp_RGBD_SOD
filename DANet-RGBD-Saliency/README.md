@@ -16,6 +16,10 @@ DANet.py:
 
 - ajout d'outputs: ligne 108
 
+datasets.py:
+
+- Modifications dans la fonction make_dataset: lignes 11-36
+
 train.py:
 
 - sauvegarde de la courbe de loss: lignes 78-83
