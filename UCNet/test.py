@@ -21,7 +21,7 @@ dataset_path = '/content/'
 depth_path = '/content/'
 
 generator = Generator(channel=opt.feat_channel, latent_dim=opt.latent_dim)
-generator.load_state_dict(torch.load('/content/UCNet-master/models/Model_100_gen_trained.pth'))
+generator.load_state_dict(torch.load('/content/UCNet/models/Model_100_gen_trained.pth'))
 
 generator.cuda()
 generator.eval()

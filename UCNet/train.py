@@ -46,10 +46,10 @@ generator_params = generator.parameters()
 generator_optimizer = torch.optim.Adam(generator_params, opt.lr_gen, betas=[opt.beta1_gen, 0.999])
 
 ## load data
-image_root = './data/img/'
-gt_root = './data/gt/'
-depth_root = './data/depth/'
-gray_root = './data/gray/'
+image_root = '/content/data/img/'
+gt_root = '/content/data/gt/'
+depth_root = '/content/data/depth/'
+gray_root = '/content/data/gray/'
 
 train_loader, training_set_size = get_loader(image_root, gt_root, depth_root, gray_root, batchsize=opt.batchsize, trainsize=opt.trainsize)
 total_step = len(train_loader)
