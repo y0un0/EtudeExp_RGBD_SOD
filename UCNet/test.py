@@ -26,7 +26,8 @@ generator.load_state_dict(torch.load('/content/UCNet/models/Model_100_gen_traine
 generator.cuda()
 generator.eval()
 
-test_datasets = ['for_feat_map']
+test_datasets = ['Objectscale', 'Multiobjects', 'Illumination', 'Complexbackground', 'small', 'medium', 'large', 'Single', 'Multi', 'Low', 'High'
+                    'simple', 'uncertain', 'complex']
 #test_datasets = ['STERE']
 
 for dataset in test_datasets:
