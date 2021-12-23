@@ -1,47 +1,6 @@
 # SOD_Evaluation_Metrics
-**A more complete python version (GPU) of the fast evaluation for salient object detection (with S-measure, Fbw measure, MAE, max/mean/adaptive F-measure, max/mean/adaptive E-measure, PRcurve and F-measure curve)**
 
-- Codes are reimplemented from the matlab version which is available from http://dpfan.net/, modified from [metricsource1](https://github.com/Hanqer/Evaluate-SOD), [metricsource2](https://github.com/PanoAsh/Evaluation-on-salient-object-detection), and [curvesource3](https://github.com/xahidbuffon/SOD-Evaluation-Tool-Python).
-
-- Evaluating 1000 images (ECSSD, all metrics) costs about 280 seconds using this implementation, while about 800 seconds for the matlab version. The evaluation results are **consistent** with the matlab version.
-
-- The source files should be orginized as follows:
-
-      --gt/
-            --Dataset_1/
-                --img1.png
-                --img2.png
-                    ...
-            --Dataset_2/
-                ...
-      --pred_maps/
-            --Method_1/
-                --Dataset_1/
-                    --img1.png
-                    --img1.png
-                        ...
-                --Dataset_2/
-                    ...
-            --Method_2/
-                ...
-
-- Evaluate your map by run: 
-  
-  `python main.py --pred_root_dir ./pred_maps/ --gt_root_dir ./gt/ --save_dir ./score/`
-
-- The format of the result file is shown as [this](./score/result.txt).
-
-  `#[Dataset_Name] [Method_Name]# [value mae], [value max-fmeasure], [value mean-fmeasure], [value9 adp-fmeasure], [value max-Emeasure], [value mean-Emeasure], [value adp-Emeasure], [value S-measure_alpha05], [value Fbw-measure].`
-
-- Draw the PR curve and F-measure Curve by run:
-  
-    `python draw_curve.py`
-  
-  Then, the image file will be saved to '/content/score/'. Two virtual curves are shown as follows:
-
-
-- The above metrics are related to the following papers:
-
+Les métriques sont basées sur ces articles:
 
       @inproceedings{Fmeasure,
           title={Frequency-tuned salient region detection},
@@ -83,3 +42,53 @@
         pages={248--255},
         year={2014}
       }
+
+Code: https://github.com/zyjwuyan/SOD_Evaluation_Metrics.git
+
+## Contributions
+
+main.py:
+
+- Ajout de lignes de code pour régler un bug: lignes 31-40
+
+## Dépendances
+
+- Pytorch
+- torchvision
+- numpy
+- scipy
+- tqdm
+
+## Utilisation
+
+- Il est nécessaire que les fichiers soient ordonnés de la façon suivante:
+
+      --gt/
+            --Objectscale/
+                --img1.png
+                --img2.png
+                    ...
+            --Multiobjects/
+                ...
+      --pred_maps/
+            --JL-DCF/
+                --Objectscale/
+                    --img1.png
+                    --img1.png
+                        ...
+                --Multiobject/
+                    ...
+            --DFM-Net/
+                ...
+
+- Le calcul des métriques se fais en lançant la commande suivante: 
+  
+  `!python main.py --pred_root_dir /content/pred_maps/ --gt_root_dir /content/gt/ --save_dir /content/score/`
+
+
+- La création des courbes de précision-rappel et de F-measure est réalisée en lançant la commande suivante:
+  
+    `!python draw_curve.py`
+  
+  Ensuite les fichiers seront sauvegardé dans le dossier '/content/score/'.
+
