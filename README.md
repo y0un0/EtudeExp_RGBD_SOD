@@ -45,3 +45,21 @@ year={2020}
   year={2020}
 }
 ```
+
+## Datasets et poids des modèles
+
+Poids des modèles: https://drive.google.com/file/d/1WxrzNBMnmFfRay9s4LAaRli2Q5THQGUp/view?usp=sharing
+
+Dataset d'entrainement: 
+
+- RGBDCollection pour les méthodes JL-DCF, DANet et DFM-Net: https://drive.google.com/file/d/1KZtFdJbA1hrkgh2On2OGF_tEPxQqDFx_/view?usp=sharing
+- data pour la méthode UCNet: https://drive.google.com/file/d/1v99Af35qfXA76yjazpAVtV7PwyePSwZf/view?usp=sharing
+
+A noter que les datasets d'entrainement RGBDcollection et data comportent les même données. La seule différence est que "data" possède un dossier en plus nommé "gray".
+
+Datasets de test:
+
+- Test sur les datasets globaux: https://drive.google.com/file/d/1bcAQ3OaMoV6ZWaa1CRfpriKjBzlKL_is/view?usp=sharing
+- Test sur les sous datasets: https://drive.google.com/file/d/1Y1EDO35tXCLN4zFS5Xrm7QkIRpsGLMwQ/view?usp=sharing
+
+
