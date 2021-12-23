@@ -109,8 +109,8 @@ if __name__ == '__main__':
                         , choices=['resnet50', 'resnet101', 'vgg16', 'densenet161'])  # Network Architecture
 
     # Train data
-    parser.add_argument('--train_root', type=str, default='/dataset/RGBDcollection')
-    parser.add_argument('--train_list', type=str, default='/dataset/RGBDcollection/train.lst')
+    parser.add_argument('--train_root', type=str, default='/content/RGBDcollection')
+    parser.add_argument('--train_list', type=str, default='/content/RGBDcollection/train_ori.lst')
 
     # Testing settings
     parser.add_argument('--model', type=str, default='checkpoints/vgg16.pth')  # Snapshot
