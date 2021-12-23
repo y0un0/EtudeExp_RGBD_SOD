@@ -6,8 +6,8 @@ import argparse
 '''
 To run this script, pleasure run main.py first to produce the curve_cache.
 '''
-curve_cache_dir='./score/curve_cache/' #'./Your_Method_Name/score/curve_cache/'
-curve_save_dir='./score/'
+curve_cache_dir='/content/score/curve_cache/' #'./Your_Method_Name/score/curve_cache/'
+curve_save_dir='/content/score/'
 if not os.path.exists(curve_save_dir):
     os.makedirs(curve_save_dir)
 datasets=os.listdir(curve_cache_dir)
@@ -27,7 +27,7 @@ for dataset in datasets:
         plot_pr_vals[method]=(recall,prec)
         plot_fm_vals[method]=(fm_x,fm)
     plt.clf()
-    colors = 'rkbmc';
+    colors = 'rkbmc'
     ticks = ['-', '--']
     for i, m in enumerate(methods):
         x, y = plot_pr_vals[m]
@@ -38,16 +38,16 @@ for dataset in datasets:
     _font_size_ = 16
     plt.title(dataset, fontsize=_font_size_ + 2)
     plt.xlim([0.55, 1.0]);  # plt.ylim([0.0, 1.0])
-    plt.xlabel("Recall", fontsize=_font_size_);
+    plt.xlabel("Recall", fontsize=_font_size_)
     plt.xticks(fontsize=_font_size_ - 4)
-    plt.ylabel("Precision", fontsize=_font_size_);
+    plt.ylabel("Precision", fontsize=_font_size_)
     plt.yticks(fontsize=_font_size_ - 4)
     plt.legend(methods, loc='lower left', fontsize=_font_size_ - 2, framealpha=0.75)
     plt.savefig(os.path.join(curve_save_dir, '{}_pr.png'.format(dataset)), bbox_inches='tight')
     # plt.show()
 
     plt.clf()
-    colors = 'rkbmc';
+    colors = 'rkbmc'
     ticks = ['-', '--']
     for i, m in enumerate(methods):
         x, y = plot_fm_vals[m]
@@ -58,9 +58,9 @@ for dataset in datasets:
     _font_size_ = 16
     plt.title(dataset, fontsize=_font_size_ + 2)
     plt.xlim([0, 255]);  # plt.ylim([0.0, 1.0])
-    plt.xlabel("Threshold", fontsize=_font_size_);
+    plt.xlabel("Threshold", fontsize=_font_size_)
     plt.xticks(fontsize=_font_size_ - 4)
-    plt.ylabel("F-measure", fontsize=_font_size_);
+    plt.ylabel("F-measure", fontsize=_font_size_)
     plt.yticks(fontsize=_font_size_ - 4)
     plt.legend(methods, loc='lower left', fontsize=_font_size_ - 2, framealpha=0.75)
     plt.savefig(os.path.join(curve_save_dir, '{}_fm.png'.format(dataset)), bbox_inches='tight')
