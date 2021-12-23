@@ -60,7 +60,7 @@ if __name__ == "__main__":
     parser.add_argument('--datasets', type=str, default=None)
     parser.add_argument('--gt_root_dir', type=str, default=gt_root_dir)
     parser.add_argument('--pred_root_dir', type=str, default=pred_root_dir)
-    parser.add_argument('--save_dir', type=str, default='./score/')
+    parser.add_argument('--save_dir', type=str, default='/content/score/')
     parser.add_argument('--cuda', type=bool, default=True)
     config = parser.parse_args()
     main(config)
