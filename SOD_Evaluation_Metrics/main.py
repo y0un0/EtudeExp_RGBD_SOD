@@ -27,6 +27,18 @@ def main(cfg):
     else:
         #dataset_names = cfg.datasets.split(' ')
         dataset_names = cfg.datasets
+
+    # Pour éviter le bug de .ipynb_checkpoints
+    for i in range(len(dataset_names)):
+        if dataset_names[i] == '.ipynb_checkpoints':
+            del dataset_names[i]
+            break
+
+    for j in range(len(method_names)):
+        if method_names[j] == '.ipynb_checkpoints':
+            del method_names[j]
+            break
+            
     threads = []
     for dataset in dataset_names:
         for method in method_names:
@@ -39,16 +51,16 @@ def main(cfg):
 if __name__ == "__main__":
     pred_root_dir='/content/pred_maps/'
     gt_root_dir='/content/gt/'
-    MODEL_NAMES = os.listdir(pred_root_dir)
-    MODEL_NAMES.sort(key=lambda x: x[:])
-    DATA_NAMES = os.listdir(gt_root_dir)
-    DATA_NAMES.sort(key=lambda x: x[:])
+    # MODEL_NAMES = os.listdir(pred_root_dir)
+    # MODEL_NAMES.sort(key=lambda x: x[:])
+    # DATA_NAMES = os.listdir(gt_root_dir)
+    # DATA_NAMES.sort(key=lambda x: x[:])
     parser = argparse.ArgumentParser()
-    parser.add_argument('--methods', type=str, default=MODEL_NAMES)
-    parser.add_argument('--datasets', type=str, default=DATA_NAMES)
+    parser.add_argument('--methods', type=str, default=None)
+    parser.add_argument('--datasets', type=str, default=None)
     parser.add_argument('--gt_root_dir', type=str, default=gt_root_dir)
     parser.add_argument('--pred_root_dir', type=str, default=pred_root_dir)
-    parser.add_argument('--save_dir', type=str, default='/content/score/')
+    parser.add_argument('--save_dir', type=str, default='./score/')
     parser.add_argument('--cuda', type=bool, default=True)
     config = parser.parse_args()
     main(config)
