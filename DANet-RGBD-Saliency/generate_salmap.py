@@ -12,7 +12,7 @@ from DANet import RGBD_sal
 torch.manual_seed(2018)
 torch.cuda.set_device(0)
 
-ckpt_path = '/content/DANet-RGBD-Saliency/model/'
+ckpt_path = '/content/DANet-RGBD-Saliency/model_train_pth/'
 exp_name = ''
 
 args = {
