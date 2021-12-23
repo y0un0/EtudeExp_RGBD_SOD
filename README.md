@@ -1,5 +1,5 @@
 # SYS843_EtudeExp_RGBD_SOD
-Younès Driouache
+Younès Driouache  DRIY 0907 9702
 
 Voici les des dossiers des méthodes DANet, DFM-Net, JL-DCF et UCNet.
 
