@@ -61,6 +61,8 @@ Mettre le chemin des données d'entrainement dans config.py:
 
 ``datasets_root_test ='/content/Complexbackground'``
 
+Télécharger le poids "20500.pth" grâce au lien de la page principale
+
 Lancer generate_salmap.py pour visualiser les cartes de saillance prédites
 
 Lancer generate_visfeamaps.py pour visualiser les cartes de caractéristiques
