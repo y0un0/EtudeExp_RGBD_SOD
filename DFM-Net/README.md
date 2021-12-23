@@ -39,7 +39,7 @@ Les auteurs de cette méthodes n'ont pas fourni le code d'entrainement mais ils 
 
 ## Test
 
-Préparer les données de cette façon:
+Préparer les données de cette façon et télécharger le poids "DFMNet_300_epoch.pth" grâce au lien de la page principal:
 
 ```
 -dataset\ 
