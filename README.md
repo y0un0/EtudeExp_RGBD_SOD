@@ -1,4 +1,5 @@
-# SYS843_EtudeExperimentale
+# SYS843_EtudeExp_RGBD_SOD
+Younès Driouache
 
 Voici les des dossiers des méthodes DANet, DFM-Net, JL-DCF et UCNet.
 
