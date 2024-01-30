@@ -34,6 +34,7 @@ leurs propres défis.
 Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
 
 ![DANet](ressource/DANet.png)
+
 [[code](https://github.com/Xiaoqi-Zhao-DLUT/DANet-RGBD-Saliency.git)] | [[paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670647.pdf)]
 
 ```
@@ -50,6 +51,7 @@ Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utili
 Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
 
 ![DFM-Net](ressource/DFM-Net.png)
+
 [[code]( https://github.com/zwbx/DFM-Net.git)] | [[paper](https://arxiv.org/pdf/2107.01779.pdf)]
 
 ```
@@ -67,6 +69,7 @@ year={2021}
 Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
 
 ![JL-DCF](ressource/JL-DCF.png)
+
 [[code](https://github.com/jiangyao-scu/JL-DCF-pytorch.git)] | [[paper](https://arxiv.org/pdf/2004.08515.pdf)]
 
 ```
@@ -84,6 +87,7 @@ year={2020}
 Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
 
 ![UCNet](ressource/UCNet.png)
+
 [[code](https://github.com/JingZhang617/UCNet.git)] | [[paper](https://arxiv.org/pdf/2004.05763.pdf)]
 
 ```
