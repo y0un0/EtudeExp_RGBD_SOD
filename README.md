@@ -1,14 +1,40 @@
-# SYS843_EtudeExp_RGBD_SOD
-Younès Driouache  DRIY 0907 9702
+# Etude expérimentale - RGBD SOD - SYS843
 
-Voici les des dossiers des méthodes DANet, DFM-Net, JL-DCF et UCNet.
+La perception visuelle est la capacité du cerveau à interpréter ce que les yeux voient. Elle est 
+importante dans de nombreuses activités comme la lecture, l’écriture ainsi que la manipulation 
+d’objets. En plus de la perception visuelle, la perception de la profondeur nous permet de voir 
+le monde en trois dimensions, d’identifier facilement et efficacement des objets, d’estimer leurs 
+tailles et leurs orientations dans l’espace. Pour les robots ou encore les véhicules autonomes, la 
+perception visuelle permet d’extraire des informations fondamentales sur l’environnement dans 
+lequel ils évoluent. En effet, elle contribue à augmenter leur autonomie pour la navigation et la 
+localisation dans un environnement inconnu. Cependant, les environnements peuvent être plus 
+ou moins complexes. L’implémentation d’un mécanisme d’attention visuelle est donc 
+nécessaire. Un tel mécanisme permet de déterminer une carte de saillance qui représente 
+l’importance d’un stimuli visuel par rapport à son environnement.
 
-Les codes utilisé proviennent des répos suivant:
+Une approche de la vision par ordinateur qui utilise un tel mécanisme est la détection d’objets 
+saillants (SOD). L’avantage de cette approche, c’est qu’elle permet de focaliser l’attention sur 
+une région de l’image afin de détecter de façon robuste un ou plusieurs objets. Par conséquent, 
+cette approche peut être bénéfique pour des applications telles que les robots, les véhicules 
+autonomes ainsi que la vidéo surveillance. En effet, pour les véhicules autonomes un des points 
+importants est de garantir la robustesse de la reconnaissance des panneaux de signalisation. 
+Étant généralement de couleurs assez vives, ils attirent facilement l’attention ainsi la SOD 
+permet de les détecter de façon plus robuste, ce qui contribue à la sécurité routière. De la même 
+façon, pour la vidéo surveillance, la SOD permet de localiser et de capter l’évolution des 
+humains et des véhicules. 
 
-- DANet = https://github.com/Xiaoqi-Zhao-DLUT/DANet-RGBD-Saliency.git
-- DFM-Net = https://github.com/zwbx/DFM-Net.git
-- JL-DCF = https://github.com/jiangyao-scu/JL-DCF-pytorch.git
-- UCNet = https://github.com/JingZhang617/UCNet.git
+Finalement, grâce à l’émergence des capteurs de profondeur, de nombreuses techniques de 
+détection d’objets saillants utilisant des images RGB-D ont été proposées. Toutes possédant 
+leurs propres défis.
+
+# Méthodes RGBD-SOD utilisées
+
+## DANet
+
+Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
+
+![DANet](ressource/DANet.png)
+[[code](https://github.com/Xiaoqi-Zhao-DLUT/DANet-RGBD-Saliency.git)] | [[paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123670647.pdf)]
 
 ```
 @inproceedings{DANet,
@@ -19,6 +45,13 @@ Les codes utilisé proviennent des répos suivant:
 }
 ```
 
+## DFM-Net
+
+Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
+
+![DFM-Net](ressource/DFM-Net.png)
+[[code]( https://github.com/zwbx/DFM-Net.git)] | [[paper](https://arxiv.org/pdf/2107.01779.pdf)]
+
 ```
 @inproceedings{zhang2021depth,
 title={Depth quality-inspired feature manipulation for efficient RGB-D salient object detection},
@@ -28,6 +61,14 @@ pages={731--740},
 year={2021}
 }
 ```
+
+## JL-DCF
+
+Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
+
+![JL-DCF](ressource/JL-DCF.png)
+[[code](https://github.com/jiangyao-scu/JL-DCF-pytorch.git)] | [[paper](https://arxiv.org/pdf/2004.08515.pdf)]
+
 ```
 @inproceedings{Fu2020JLDCF,
 title={JL-DCF: Joint Learning and Densely-Cooperative Fusion Framework for RGB-D Salient Object Detection},
@@ -38,6 +79,13 @@ year={2020}
 }
 ```
 
+## UCNet
+
+Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
+
+![UCNet-DCF](ressource/UCNET.png)
+[[code](https://github.com/JingZhang617/UCNet.git)] | [[paper](https://arxiv.org/pdf/2004.05763.pdf)]
+
 ```
 @inproceedings{Zhang2020UCNet,
   title={UC-Net: Uncertainty Inspired RGB-D Saliency Detection via Conditional Variational Autoencoders},
@@ -47,7 +95,7 @@ year={2020}
 }
 ```
 
-## Datasets et poids des modèles
+# Datasets et poids des modèles
 
 Poids des modèles: https://drive.google.com/file/d/1WxrzNBMnmFfRay9s4LAaRli2Q5THQGUp/view?usp=sharing
 
@@ -63,4 +111,6 @@ Datasets de test:
 - Test sur les datasets globaux: https://drive.google.com/file/d/1bcAQ3OaMoV6ZWaa1CRfpriKjBzlKL_is/view?usp=sharing
 - Test sur les sous datasets: https://drive.google.com/file/d/1Y1EDO35tXCLN4zFS5Xrm7QkIRpsGLMwQ/view?usp=sharing
 
+# Documentation
 
+Dans le dossier `Etude_experimentale/` vous trouverez la présentation du projet ainsi que les résultats que j'ai obtenu.
