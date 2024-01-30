@@ -83,7 +83,7 @@ year={2020}
 
 Le modèle DANet est un modèle de détection d'objet saillant grâce à l'utilisation d'une image (RGB) et d'une carte de profondeur. Une description plus détaillée est disponible dans le dossier `Etude_experimentale/`. Voici sa structure:
 
-![UCNet-DCF](ressource/UCNET.png)
+![UCNet](ressource/UCNet.png)
 [[code](https://github.com/JingZhang617/UCNet.git)] | [[paper](https://arxiv.org/pdf/2004.05763.pdf)]
 
 ```
